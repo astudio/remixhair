@@ -195,7 +195,7 @@
 						 */
 						Symphony::ExtensionManager()->notifyMembers('AuthorLoginSuccess', '/login/', array('username' => Symphony::Database()->cleanValue($_POST['username'])));
 
-						isset($_POST['redirect']) ? redirect($_POST['redirect']) : redirect(SYMPHONY_URL . '/');
+						isset($_POST['redirect']) ? redirect($_POST['redirect']) : redirect(SYMPHONY_URL . '/publish/'); //2013-11-11 change back-end loggin path
 					}
 
 				// Reset of password requested
